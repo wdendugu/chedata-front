@@ -39,7 +39,7 @@ export default function StudentForm({ course }) {
     }
     return (
         <form onSubmit={saveLead} className="flex flex-col">
-            <label>Nombre</label>
+            <label className="">Nombre</label>
             <TextField
                 type="text"
                 placeholder="firstName"
@@ -67,7 +67,7 @@ export default function StudentForm({ course }) {
                 size="small"
             />
             <label>Telefono</label>
-            <TextareaAutosize
+            <TextField
                 type="tel"
                 placeholder="phone"
                 value={phone}

@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/0ec97688b76e8a8d3f40f37025449000?family=Uni+Sans+Bold+Regular);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Source+Sans+3:wght@500;600;700&display=swap);
+
+.base-btn {
+    @apply mr-7
+    font-bold
+    text-xl
+    py-3
+    px-5
+    border-solid
+    border-2
+    border-[#673eba];
+}
+.filled-btn {
+    @apply bg-[#673eba]
+    text-white
+    hover:bg-white
+    hover:text-[#33245e];
+}
+
+.empty-btn {
+    @apply text-[#673eba]
+    hover:bg-[#33245e] 
+    hover:text-white;
+}
+
+.custom-gradient {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+.header-links {
+    @apply mx-3
+    text-white
+    text-xl
+    font-semibold;
+}
+
+.product-grid {
+    @apply grid
+    sm:grid-cols-2
+    md:grid-cols-3
+    lg:grid-cols-4
+    xl:grid-cols-5
+    gap-9
+    mt-9;
+}
+
+.centered-box {
+    @apply max-w-[1300px] 
+    mx-auto
+    px-5;
+}
+
+.grid-12-8 {
+    @apply flex 
+    flex-col
+    sm:grid
+    sm:grid-cols-[1.2fr,.8fr];
+}
