@@ -3,19 +3,19 @@ import { mongooseConnect } from '@/lib/mongoose';
 import { Course } from '@/models/Course';
 import CourseBox from '@/components/Course';
 import Link from 'next/link';
+import CourseItem from '@/components/CourseItem';
 
 export default function Courses({ courses }) {
     const activeCourses = courses.filter((course) => course.active);
-    console.log(activeCourses);
+
     return (
         <Layout>
-            <div>
-                <h1>Cursos</h1>
-                <div className="product-grid">
-                    {activeCourses.map((course) => (
-                        <CourseBox course={course} />
+            <h2 className="font-bold">Cursos</h2>
+            <div className="product-grid">
+                {courses?.length &&
+                    courses.map((course) => (
+                        <CourseItem course={course} key={course._id} />
                     ))}
-                </div>
             </div>
         </Layout>
     );
