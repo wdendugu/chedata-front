@@ -11,7 +11,7 @@ export default function Courses({ courses }) {
     return (
         <Layout>
             <h2 className="font-bold">Cursos</h2>
-            <div className="product-grid">
+            <div className='space-y-10'>
                 {courses?.length &&
                     courses.map((course) => (
                         <CourseItem course={course} key={course._id} />

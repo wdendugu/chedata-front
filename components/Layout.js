@@ -5,7 +5,7 @@ export default function Layout({ children, addclass }) {
     return (
         <>
             <Header />
-            <div className={`centered-box mb-6 ${addclass} mt-20`}>
+            <div className={`centered-box mb-6 ${addclass} pt-[100px]`}>
                 {children}
             </div>
             <Footer />
